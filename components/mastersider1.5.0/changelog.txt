@@ -1,0 +1,31 @@
+Master Slider 1.5.0, 2014-2-8
+-----------------------------
+- Added HD background videos.
+- Added autofill option.
+- Added fullheight option.
+- Added fullscreen template.
+- Added smart memory management, now slider works with over 150 slides in touch devices.
+- Added dynamic speed to swipe gesture.
+- Added update method in slider API.
+- Fixed tooltip positioning in Firefox and Opera.
+- Improved slide changing transition.
+
+Master Slider 1.2, 2013-12-28
+-----------------------------
+- Fixed video close button in touch devices. 
+- Fixed layers z-sorting in Safari.
+- Fixed linking layers.
+- Fixed video cover image positioning.
+- Improved timer functionality.
+
+
+Master Slider 1.1, 2013-12-14
+-----------------------------
+- Added scrolling speed option to thumbnails/tabs UI control.
+- Fixed positioning of tooltips in mobile and tablet view.
+- Improved sliding performance.
+
+
+Master Slider 1.0, 2013-12-9
+-----------------------------
+- Initial release

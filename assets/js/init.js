@@ -1,0 +1,97 @@
+$(document).ready(function() {
+    $('code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+});
+
+(function($){
+  $(function(){
+
+
+    $('.button-collapse').sideNav({
+        menuWidth: 200, // Default is 300
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: false // Choose whether you can drag to open on touch screens,
+         });
+
+      $(".semantify nav .menu ul li a").click(function(e) {
+          var val = $(this).data("id");
+          if(val!=undefined){
+              e.preventDefault();
+              var id = "#"+$(this).data("id");
+              //location.href = window.location.protocol+"//"+window.location.hostname+"/"+window.location.pathname+"/"+id;
+
+              $('html, body').animate({
+                  scrollTop: $(id).offset().top
+              }, 700);
+              window.location.hash="#"+$(this).data("id");
+          }
+
+      });
+
+
+
+	//master slider
+	/*
+      var slider = new MasterSlider();
+	slider.setup('masterslider', {
+        fullwidth:true,
+        heightLimit: true,
+        // slider standard width
+        height: 700,
+        width:1200,
+        // slider standard height
+        space: 5,
+        swipe: false,
+        //auto play
+        autoplay: false,
+        duration:300,
+
+        loop: true
+	});
+	slider.control('arrows',{autohide:false});
+	slider.control('bullets',{autohide:false});
+*/
+
+
+
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+
+ 
+jQuery(document).ready(function() {
+ 
+var offset = 250;
+ 
+var duration = 300;
+ 
+jQuery(window).scroll(function() {
+ 
+if (jQuery(this).scrollTop() > offset) {
+ 
+jQuery('.back-to-top').fadeIn(duration);
+ 
+} else {
+ 
+jQuery('.back-to-top').fadeOut(duration);
+ 
+}
+ 
+});
+ 
+ 
+ 
+jQuery('.back-to-top').click(function(event) {
+ 
+event.preventDefault();
+ 
+jQuery('html, body').animate({scrollTop: 0}, duration);
+ 
+return false;
+ 
+})
+ 
+});
+ 
