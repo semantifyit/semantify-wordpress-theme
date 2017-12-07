@@ -1,11 +1,11 @@
 <?php
 
-
 /**
  * theme setup
  */
 function semantify_setup()
 {
+
 // This theme uses wp_nav_menu() in two locations.
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'title-tag' );
@@ -15,7 +15,11 @@ function semantify_setup()
     add_image_size( 'semantify-featured-image', 2000, 1200, true );
     add_image_size( 'semantify-thumbnail-avatar', 100, 100, true );
 
+    add_theme_support( 'post-thumbnails' );
+
     // Define and register starter content to showcase the theme on new sites.
+
+
 
     $starter_content = array(
 
@@ -133,10 +137,23 @@ function semantify_setup()
     //update_option( 'fresh_site',1);
 
     if(get_option( 'fresh_site')) {
+
+        /*
+        $starter_content_applied = 0;
+        $wp_customize = WP_Customize_Manager::import_theme_starter_content( );
+
+        foreach ( $wp_customize->changeset_data() as $setting_id => $setting_params ) {
+            if ( ! empty( $setting_params['starter_content'] ) ) {
+                $starter_content_applied += 1;
+            }
+        }
+        */
+
         //remove_theme_mods();
         //echo 33;
         //echo("<br><br><div style='text-align: center;'><h3>fresh</h3></div>");
         update_option( "semantify-theme-content", 0 );
+        update_option( "fresh_site", 0 );
     }
 
 }
@@ -226,12 +243,18 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
                 semantify_add_meta($id, "section-text","Lorem ipsum dolor sit am et, consec tetur adipiscing elit. Vivamus plac erat viverra justo eget feugiat.");
                 semantify_add_meta($id, "section-button-title","Sign up for Semantify!");
 
+                semantify_add_meta($id, "instant-hash-1","ry0lz3ZVf1G");
+                semantify_add_meta($id, "instant-hash-2","H1TlMn-4M1f");
+                semantify_add_meta($id, "instant-hash-3","Byigf2ZEfJf");
             } else {
                 delete_post_meta($id,"button-1-title");
                 delete_post_meta($id,"button-2-title");
                 delete_post_meta($id,"section-title");
                 delete_post_meta($id,"section-text");
                 delete_post_meta($id,"section-button-title");
+                delete_post_meta($id,"instant-hash-1");
+                delete_post_meta($id,"instant-hash-2");
+                delete_post_meta($id,"instant-hash-3");
             }
             break;
 
@@ -342,7 +365,13 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
 }
 
 
-
+add_action( 'save_post_post', function( $post_ID )
+{
+    if( 'auto-draft' === get_post_status( $post_ID )
+        &&  post_type_supports( get_post_type( $post_ID ), 'custom-fields' )
+    )
+        add_post_meta( $post_ID, 'perex', '' );
+} );
 
 
 /**
@@ -420,6 +449,7 @@ function add_last_nav_item($items) {
     return $items .= '<li><a href="'.get_option("header-section-0-menu-button-url").'" class="button-parent"><button class="button-transparent">'.get_option("header-section-0-menu-button").'</button></a></li>';
 }
 add_filter('wp_nav_menu_items','add_last_nav_item');
+
 
 
 
