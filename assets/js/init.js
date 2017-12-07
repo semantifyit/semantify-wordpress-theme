@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('code').each(function(i, block) {
         hljs.highlightBlock(block);
     });
+
 });
 
 (function($){
@@ -15,7 +16,7 @@ $(document).ready(function() {
         draggable: false // Choose whether you can drag to open on touch screens,
          });
 
-      $(".semantify nav .menu ul li a").click(function(e) {
+      $(".semantify.is-front nav .menu ul li a").click(function(e) {
           var val = $(this).data("id");
           if(val!=undefined){
               e.preventDefault();
@@ -30,6 +31,9 @@ $(document).ready(function() {
 
       });
 
+      $("#instant-button-1").click(function(){
+          $(".semantify-instant-annotations").toggleClass("hidden");
+      });
 
 
 	//master slider
