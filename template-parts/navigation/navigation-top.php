@@ -24,7 +24,7 @@
                                            'theme_location' => 'top',
                                            'menu_id'        => 'top-menu',
                                            'menu_class' => "menu-center hide-on-small-and-down",
-                                           'walker'=> new Single_Page_Walker,
+                                           'walker'=> new Single_Page_Walker
                                        ) ); ?>
 
 
@@ -37,7 +37,8 @@
         <?php wp_nav_menu( array(
                                'theme_location' => 'top',
                                'menu_id'        => 'nav-mobile',
-                               'menu_class' => "side-nav"
+                               'menu_class' => "side-nav",
+                                'walker'=> new Single_Page_Walker
                            ) ); ?>
 
 
