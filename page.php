@@ -22,7 +22,7 @@ the_post();
     <article id="<?php  global $post; echo $post->post_name; ?>"  >
 
 
-        <div class="container references" id="references">
+        <div class="container" >
             <div class="section">
                 <!--   Icon Section   -->
 
