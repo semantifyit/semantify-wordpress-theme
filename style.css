@@ -1370,7 +1370,7 @@ footer .author a{
 }
 
 .semantify ul:not(.browser-default){
-    padding: 0 16px;
+    padding: 20px 16px;
 }
 
 .line-fix{
@@ -1405,6 +1405,55 @@ footer .author a{
 .text-align-center{
     text-align: center;
 }
+
+.example .semantifyit code{
+    line-height: 20px;
+}
+
+
+.semantify-instant-annotations{
+    margin-top: 40px;
+}
+
+.post .nadpis{
+    margin-top: 0px;
+}
+
+.post .nadpis h1{
+    margin-top: 0px !important;
+    margin: 0rem 0 0rem 0;
+}
+
+.post .claim-text p{
+    margin: 0;
+}
+
+.post .meta{
+    color: #5E5E5E;
+}
+
+.post-image{
+    width:100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 180px;
+}
+
+.post-image.big{
+    height:350px;
+    margin-bottom: 10px;
+}
+
+.logo img{
+    margin-top: 0;
+}
+
+.semantify .side-nav a:hover {
+    background-color: inherit;
+}
+
 
 
 @media only screen and (min-width : 1201px) {
@@ -1517,6 +1566,7 @@ footer .author a{
 
     .logo img{
         height:40px;
+        margin-top: 10px;
     }
 
     .semantify nav ul li a{
@@ -1546,9 +1596,9 @@ footer .author a{
     }
 
     .example .semantifyit code{
-        font-size:9px;
-        font-size: 0.9vw
-        line-height: 12px;
+        font-size:10px;
+        font-size: 1.25vw;
+        line-height: 15px;
     }
 
     .example .bussines .amenity{
@@ -1621,6 +1671,11 @@ footer .author a{
     .semantify.not-front .claim-box{
         width:70%;
     }
+
+    .post-image{
+        height:160px;
+    }
+
 }
 
 @media only screen and (max-width : 800px) {
@@ -1645,15 +1700,40 @@ footer .author a{
         width:80%;
     }
 
+    .example .semantifyit code{
+        line-height: 16px;
+    }
+
+    .post-image{
+        height:180px;
+    }
+
+    .post-image.big{
+        height:300px;
+    }
 
 
+    .semantify.not-front .top-container {
+            min-height: 121px;
+    }
 
+    .logo img{
+        margin-top: 0;
+    }
 
+    .semantify .side-nav button.button-transparent{
+        color: #2F3435;
+        border-color: #2F3435;
+    }
 }
 
 
 
 @media only screen and (max-width : 600px) {
+
+    .semantify.not-front nav .button-collapse {
+        top: 20px;
+    }
 
     .preview-box{
         width:100%;
@@ -1756,6 +1836,7 @@ footer .author a{
 
     .logo img{
         height:30px;
+        margin-top: 0;
     }
 
     .semantify nav ul li a{
@@ -1840,6 +1921,21 @@ footer .author a{
     .semantify.not-front .claim-box{
         width:100%;
     }
+
+    .post-image{
+        margin-bottom: 20px;
+    }
+
+    .post-image.big{
+        height:250px;
+    }
+
+    .semantify.not-front .top-container {
+            min-height: 108px;
+    }
+
+
+
 
 
 }
