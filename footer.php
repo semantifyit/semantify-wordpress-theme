@@ -82,10 +82,32 @@
 <script src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/jquery-2.1.1.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/components/materialize/js/materialize.js"></script>
 <!-- MasterSlider main JS file -->
-<script src="<?php echo get_bloginfo('template_directory'); ?>/components/mastersider1.5.0/quick-start/masterslider/masterslider.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/components/highlight/highlight.pack.js"></script>
 
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAuS25rRYGt029PbQ0ee8NWvlKQuYwCR90&sensor=false&extension=.js'></script>
+<?php if(is_front_page()){ ?>
+    <!-- Scripts -->
+    <!-- Bootstrap Script -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!-- Bootstrap Material Design Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.9/js/ripples.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.9/js/material.min.js"></script>
+    <!-- Snackbar-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snackbarjs/1.1.0/snackbar.min.js"></script>
+    <!-- clipboard -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <!-- momentjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <!-- DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- InstantAnnotation -->
+<script defer src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/instantAnnotations.js"></script>
+
+<?php } ?>
+
+
+
 <script src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/init.js?e=<?php echo rand(0,99)?>"></script>
 <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
 </body>

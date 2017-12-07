@@ -35,6 +35,12 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
 
+
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/annotation.css?v=1.1.9<?php echo rand(0,99)?>" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+
+
     <title><?php echo get_bloginfo( 'name' ); ?></title>
 
     <style type="text/css">
@@ -87,7 +93,7 @@
 
 </head>
 
-<body class="semantify <?php if(!is_front_page()) {echo "not-front";} ?>" id="top">
+<body class="semantify <?php if(!is_front_page()) {echo "not-front";}else{echo "is-front";} ?>" id="top">
 
 <div class="top-container header-img">
 
