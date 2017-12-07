@@ -2,7 +2,7 @@
 
 
 get_header(); ?>
-
+</br>
 <?php
 if ( have_posts() ) :
 
