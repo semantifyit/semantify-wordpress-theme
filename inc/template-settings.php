@@ -121,7 +121,8 @@ function setting_footer_section_3_text() { ?>
 
 function reset_settings_0_all() {
     ?>
-    <input type="text" class="big" name="fresh_site"  value="<?php echo get_option( 'fresh_site' ); ?>" />
+    <input type="checkbox" name="fresh_site" value="1" <?php checked(1, get_option('fresh_site'), true); ?> />
+
 <?php }
 
 
