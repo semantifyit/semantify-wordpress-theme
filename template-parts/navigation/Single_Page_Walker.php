@@ -16,7 +16,7 @@ $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn
 if($item->object == 'page')
 {
 $varpost = get_post($item->object_id);
-if(is_home()||is_front_page()){
+if(is_front_page()){
 $attributes .= ' href="#' . $varpost->post_name . '" data-id="' . $varpost->post_name . '"';
 }else{
 $attributes .= ' href="'.home_url().'/#' . $varpost->post_name . '" ';
