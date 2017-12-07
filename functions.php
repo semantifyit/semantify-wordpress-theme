@@ -318,7 +318,7 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
             if(!$delete){
                 semantify_add_meta($id, "reference-1-title","Mayrhofen");
                 semantify_add_meta($id, "reference-1-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue vulputate convallis. Nullam nec elementum neque. Vivamus placerat viverra justo eget feugiat. Duis eu pellentesque justo, id lacinia tortor. Aliquam porttitor tellus vitae leo hendrerit, ut fringilla sapien euismod.");
-                semantify_add_meta($id, "reference-1-img",get_bloginfo('template_directory')."/assets/img/mayrhofen.jpg");
+                semantify_add_meta($id, "reference-1-img",get_bloginfo('template_directory')."/assets/img/mayrhofen-z.jpg");
 
                 semantify_add_meta($id, "reference-2-title","Seefeld");
                 semantify_add_meta($id, "reference-2-text","Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue vulputate convallis. Nullam nec elementum neque. Vivamus placerat viverra justo eget feugiat. Duis eu pellentesque justo, id lacinia tortor. Aliquam porttitor tellus vitae leo hendrerit, ut fringilla sapien euismod.");
