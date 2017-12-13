@@ -5,8 +5,15 @@ $(document).ready(function() {
 
 });
 
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
 (function($){
   $(function(){
+
+
+
 
 
     $('.button-collapse').sideNav({
@@ -35,8 +42,17 @@ $(document).ready(function() {
           $(".semantify-instant-annotations").toggleClass("hidden");
       });
 
+      //load annotations
+      var jqxhr = $.ajax( "https://semantify.it/api/annotation/count/total/" )
+          .done(function( data ) {
+              $("#annotations_count").html(numberWithSpaces(data));
+          })
+          .fail(function() {
+              $("#annotations_count").html(numberWithSpaces(1578293));
+          });
 
-	//master slider
+
+      //master slider
 	/*
       var slider = new MasterSlider();
 	slider.setup('masterslider', {

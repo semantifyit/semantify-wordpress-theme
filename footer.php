@@ -9,7 +9,7 @@
             <div class="col s12">
                 <div class="nadpis center">
                     <h1 class="white">
-                        1 598 347
+                        <span id="annotations_count">1 565 473</span>
                     </h1>
                     <h5 class="future"><?php echo get_option('footer-annotations-delivered-text'); ?></h5>
                     <br/><br/>
