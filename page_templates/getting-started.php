@@ -41,9 +41,9 @@ if(!is_front_page()) {
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 buttons-box">
+                <div class="col s12 buttons-box" style="text-align: center">
                     <button class="button-transparent red big" id="instant-button-1"><?php echo get_post_meta($post->ID, 'button-1-title',1); ?></button>
-                    <button class="button-transparent red big" id="instant-button-2"><?php echo get_post_meta($post->ID, 'button-2-title',1); ?></button>
+                    <button class="button-transparent red big " style="display:none;" id="instant-button-2"><?php echo get_post_meta($post->ID, 'button-2-title',1); ?></button>
                 </div>
             </div>
 
