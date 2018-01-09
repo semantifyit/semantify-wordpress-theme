@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
 
 
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/annotation.css?v=1.1.9<?php echo rand(0,99)?>" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/components/instant-annotator-master/css/instantAnnotations.css?<?php echo rand(0,1111);?>" type="text/css" rel="stylesheet" media="screen,projection">
 
 
 

@@ -244,7 +244,7 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
                 semantify_add_meta($id, "section-button-title","Sign up for Semantify!");
 
                 semantify_add_meta($id, "instant-hash-1","ry0lz3ZVf1G");
-                semantify_add_meta($id, "instant-hash-2","H1TlMn-4M1f");
+                semantify_add_meta($id, "instant-hash-2","SyqlG3b4Mkf");
                 semantify_add_meta($id, "instant-hash-3","Byigf2ZEfJf");
             } else {
                 delete_post_meta($id,"button-1-title");

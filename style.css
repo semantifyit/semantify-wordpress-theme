@@ -1454,6 +1454,11 @@ footer .author a{
     background-color: inherit;
 }
 
+.semantify .semantify-instant-annotations .btn{
+    line-height:1;
+}
+
+
 
 
 @media only screen and (min-width : 1201px) {
@@ -1934,9 +1939,6 @@ footer .author a{
             min-height: 108px;
     }
 
-
-
-
-
 }
+
 

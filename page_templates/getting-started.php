@@ -55,7 +55,6 @@ if(!is_front_page()) {
                     <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-3',1); ?>" data-sub="true" data-btns="preview+clear+save+copy"></div>
 
 
-
                 </div>
             </div>
 
