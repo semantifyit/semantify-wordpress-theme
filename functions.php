@@ -133,10 +133,16 @@ function semantify_setup()
     add_theme_support( 'starter-content', $starter_content );
 
 
-
     //update_option( 'fresh_site',1);
 
     if(get_option( 'fresh_site')) {
+
+
+        global $pagenow;
+        if ( $pagenow === 'customize.php') {
+            global $wp_customize;
+            add_action('after_setup_theme', array($wp_customize, 'import_theme_starter_content'), 100);
+        }
 
         /*
         $starter_content_applied = 0;
