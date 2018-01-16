@@ -50,9 +50,9 @@ if(!is_front_page()) {
             <div class="semantify-instant-annotations hidden">
                 <div class="row">
 
-                    <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-1',1); ?>" data-btns="default"></div>
-                    <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-2',1); ?>" data-sub="true" data-btns="preview+clear+save+copy"></div>
-                    <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-3',1); ?>" data-sub="true" data-btns="preview+clear+save+copy"></div>
+                    <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-1',1); ?>" data-title="<?php echo get_post_meta($post->ID, 'instant-title-1',1); ?>" data-btns="default"></div>
+                    <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-2',1); ?>" data-title="<?php echo get_post_meta($post->ID, 'instant-title-2',1); ?>" data-sub="true" data-btns="preview+clear+save+copy"></div>
+                    <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-3',1); ?>" data-title="<?php echo get_post_meta($post->ID, 'instant-title-3',1); ?>" data-sub="true" data-btns="preview+clear+save+copy"></div>
 
 
                 </div>

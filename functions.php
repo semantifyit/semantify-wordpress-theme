@@ -252,6 +252,11 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
                 semantify_add_meta($id, "instant-hash-1","ry0lz3ZVf1G");
                 semantify_add_meta($id, "instant-hash-2","SyqlG3b4Mkf");
                 semantify_add_meta($id, "instant-hash-3","Byigf2ZEfJf");
+
+                semantify_add_meta($id, "instant-title-1","Annotation Title 1");
+                semantify_add_meta($id, "instant-title-2","Annotation Title 2");
+                semantify_add_meta($id, "instant-title-3","Annotation Title 3");
+
             } else {
                 delete_post_meta($id,"button-1-title");
                 delete_post_meta($id,"button-2-title");
@@ -261,6 +266,9 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
                 delete_post_meta($id,"instant-hash-1");
                 delete_post_meta($id,"instant-hash-2");
                 delete_post_meta($id,"instant-hash-3");
+                delete_post_meta($id,"instant-title-1");
+                delete_post_meta($id,"instant-title-2");
+                delete_post_meta($id,"instant-title-3");
             }
             break;
 
