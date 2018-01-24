@@ -52,6 +52,14 @@ function numberWithSpaces(x) {
           });
 
 
+
+      if (isLoggedIn()) {
+          //logged in
+          $('#button-login-text').text("Hi " +currentUserName() + "");
+      }
+
+
+
       //master slider
 	/*
       var slider = new MasterSlider();

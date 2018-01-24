@@ -412,7 +412,7 @@ function set_semantify_content(){
     update_option('header-section-0-button','Start right away!');
     update_option('header-section-0-button-url','#');
     update_option('header-section-0-menu-button','Login');
-    update_option('header-section-0-menu-button-url','#');
+    update_option('header-section-0-menu-button-url','/login');
 
 
     //footer
@@ -460,7 +460,7 @@ function semantify_add_meta($id, $key, $value){
 
 
 function add_last_nav_item($items) {
-    return $items .= '<li><a href="'.get_option("header-section-0-menu-button-url").'" class="button-parent"><button class="button-transparent">'.get_option("header-section-0-menu-button").'</button></a></li>';
+    return $items .= '<li><a href="'.get_option("header-section-0-menu-button-url").'" class="button-parent"><button class="button-transparent" id="button-login-text">'.get_option("header-section-0-menu-button").'</button></a></li>';
 }
 add_filter('wp_nav_menu_items','add_last_nav_item');
 

@@ -90,6 +90,7 @@
 <?php } ?>
 
 
+<script src="https://semantify.it/assets/js/userHandling.js"></script>
 
 <script src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/init.js?e=<?php echo rand(0,99)?>"></script>
 <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
