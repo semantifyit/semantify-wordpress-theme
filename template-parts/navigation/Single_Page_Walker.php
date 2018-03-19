@@ -8,7 +8,7 @@ class Single_Page_Walker extends Walker_Nav_Menu
 
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
-
+        $attributes;
         global $wp_query;
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
         $class_names = $value = '';
@@ -26,7 +26,13 @@ class Single_Page_Walker extends Walker_Nav_Menu
         if ($item->object == 'page') {
             $varpost = get_post($item->object_id);
             if (is_front_page()) {
-                $attributes .= ' href="#' . $varpost->post_name . '" data-id="' . $varpost->post_name . '"';
+
+                if( $depth == 1){
+                    $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
+                }else{
+                    $attributes .= ' href="#' . $varpost->post_name . '" data-id="' . $varpost->post_name . '"';
+                }
+
             } else {
                 $attributes .= ' href="' . home_url() . '/#' . $varpost->post_name . '" ';
             }
