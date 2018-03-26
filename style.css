@@ -1458,7 +1458,7 @@ footer .author a{
     line-height:1;
 }
 
-.semantify.not-front .nav ul.dropdown-content{
+.semantify.not-front nav ul.dropdown-content{
     background-color: rgba(0, 0, 0, 0.3) !important;
     border-radius: 3px;
 }
