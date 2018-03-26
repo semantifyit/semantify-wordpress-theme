@@ -75,6 +75,8 @@
         </div>
         <?php } ?>
     </div>
+
+    <?php wp_footer(); ?>
 </footer>
 
 <!--  Scripts-->
