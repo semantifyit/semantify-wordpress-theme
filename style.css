@@ -256,7 +256,7 @@ h1.slide, h4.slide{
     margin: 0;
 }
 
-.semantify h2, .semantify h3, .semantify h4{
+.semantify h2, .semantify h3{
     color: #2F3435;
     font-family: "Roboto Condensed";
     font-size: 24px;
