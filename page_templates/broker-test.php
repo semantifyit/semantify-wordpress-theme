@@ -42,9 +42,6 @@ if(!is_front_page()) {
                     </div>
                 </div>
             </div>
-            <div class="row">
-
-            </div>
         </div>
     </div>
 </article>
