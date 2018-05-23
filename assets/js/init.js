@@ -60,6 +60,16 @@ function numberWithSpaces(x) {
 
 
 
+      if($('#brokertest').length > 0 ) {
+          $('#brokertest').load('/brokertest/brokertest.html', function () {
+
+              var BrokerTest = new $.BrokerTest();
+              BrokerTest.load();
+          });
+      }
+
+
+
       //master slider
 	/*
       var slider = new MasterSlider();
