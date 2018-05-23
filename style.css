@@ -24,13 +24,27 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Roboto Condensed';
 }
 
-*,*:hover{
+*:not(.force-materialize):not(.autocomplete-content):not(.autocomplete-content li),*:hover:not(.force-materialize){
     transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.semantify .btn{
+    box-shadow: none;
+    -webkit-box-shadow:none;
+}
 
 .semantify nav {
     position: relative;
@@ -128,6 +142,17 @@ ul#top-menu{
     height:42px;
 }
 
+ul.menu li{
+    transition: background-color .3s;
+    float: left;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+ul.menu{
+    display: table;
+}
 
 .semantify nav ul.icons li a {
     margin: 0 7px;
@@ -137,14 +162,23 @@ ul#top-menu{
 .semantify nav ul.icons li a{
     background-color: transparent;
 }
-.semantify nav .menu ul li a{
+
+.semantify .menu ul li a, .semantify .menu ul li span{
     font-family: 'Roboto';
     color: #FFFFFF;
     padding: 0 8px;
     font-size:14px;
 }
 
-.semantify nav .menu ul li{
+.semantify .menu ul li:last-child{
+    margin-right: 0;
+}
+
+.semantify .menu ul li:last-child a,.semantify .menu ul li:last-child span{
+    padding-right: 0;
+}
+
+.semantify .menu ul li{
     margin: 0 2px;
 }
 
@@ -163,8 +197,11 @@ ul#top-menu{
     display: inline-block;
 }
 
+.semantify li:first-child  button.button-transparent.red, .semantify li:first-child  button.button-transparent.grey{
+    margin-left: 0;
+}
 
-.semantify .dropdown-content{
+.semantify .dropdown-content:not(.autocomplete-content){
     background: none;
     padding-top: 8px;
     overflow: hidden;
@@ -173,11 +210,11 @@ ul#top-menu{
 .semantify .dropdown-content li:hover{
     background: none;
 }
-.semantify .dropdown-content li{
+.semantify .dropdown-content:not(.autocomplete-content) li{
     min-height: 30px;
 }
 
-.semantify .dropdown-content li a{
+.semantify .dropdown-content:not(.autocomplete-content) li a{
     border-bottom: 2px solid transparent;
 }
 
@@ -219,7 +256,7 @@ h1.slide, h4.slide{
     margin: 0;
 }
 
-.semantify h2{
+.semantify h2, .semantify h3, .semantify h4{
     color: #2F3435;
     font-family: "Roboto Condensed";
     font-size: 24px;
@@ -228,6 +265,13 @@ h1.slide, h4.slide{
     text-transform: uppercase;
 }
 
+.semantify h3{
+    font-size: 24px;
+}
+
+.semantify h4{
+    font-size: 24px;
+}
 
 .semantify h1.slide{
     font-size: 424%;
@@ -504,7 +548,7 @@ h6.future{
     text-align: center;
 }
 
-.semantify button{
+.semantify button, .semantify .btn{
     text-align: center;
     font-family:'Roboto';
     font-weight: normal;
@@ -515,7 +559,7 @@ h6.future{
     display: inline-block;
 }
 
-.semantify button:hover{
+.semantify button:hover, .semantify .btn:hover{
     opacity:0.85;
 }
 
@@ -533,26 +577,51 @@ h6.future{
     padding:0px 55px;
 }
 
-.semantify button.button-transparent{
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
-    background: transparent;
+.semantify button.button-transparent, button.button-transparent.no-color, .btn.btn-raised.button-sti-red-action {
     padding:0px 35px;
     height: 42px;
 }
 
-.semantify button.button-transparent.big{
+.semantify a.button-transparent.no-color{
+    display: inline-block;
+}
+
+.semantify a.button-transparent.no-color:hover{
+    text-decoration: underline;
+}
+
+.semantify button.button-transparent{
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    background: transparent;
+}
+
+.semantify button.button-transparent.big,  .semantify .btn{
     padding:0px 50px;
     margin: 0 20px;
 }
 
-.semantify button.button-transparent.red{
+.semantify button.button-transparent.red,  .semantify .btn.button-sti-red-action{
     color: #BF2633;
     border: 2px solid #BF2633;
-    background: transparent;
     background-color: transparent !important;
 }
 
+.semantify button.button-transparent.grey {
+    color: #959fa0 !important;
+    border: 2px solid #959fa0 !important;
+    background-color: transparent !important;
+}
+
+.semantify button.button-transparent.grey:hover{
+    background-color: rgba(47, 52, 53, 0.15) !important;
+    opacity: 1 !important;
+}
+
+.semantify button.button-transparent.red:hover, .semantify .btn.button-sti-red-action:hover{
+    background-color: rgba(191,38,51,0.15) !important;
+    opacity: 1 !important;
+}
 
 .semantify button.button-transparent.small {
     border: 1px solid #FFFFFF;
@@ -563,7 +632,7 @@ h6.future{
     line-height: 25px;
     padding:0px 20px;
     height: auto;
-    margin-top: 5px;
+    margin: 0 5px;
 }
 
 
@@ -1143,8 +1212,6 @@ footer .author a{
     white-space: pre;
 }
 
-
-
 .example .semantifyit pre {
     margin: 0;
 }
@@ -1271,7 +1338,6 @@ footer .author a{
 }
 
 
-
 .buttons-box{
     text-align: center;
 }
@@ -1369,8 +1435,8 @@ footer .author a{
     background: rgba(255,255,255,0.8);
 }
 
-.semantify ul:not(.browser-default){
-    padding: 20px 16px;
+.semantify ul:not(.browser-default):not(.force-materialize):not(.autocomplete-content){
+    padding: 20px 0px;
 }
 
 .line-fix{
@@ -1378,8 +1444,8 @@ footer .author a{
 }
 
 .semantify .example div.code code {
-        white-space: normal;
-    }
+    white-space: normal;
+}
 
 .semantify.not-front .top-container{
     min-height: 141px;
@@ -1458,39 +1524,396 @@ footer .author a{
     line-height:1;
 }
 
-.semantify.not-front nav ul.dropdown-content{
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    border-radius: 3px;
+.collapsible-body {
+    display:none;
+    border-bottom:1px solid #ddd;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:2rem;
+}
+
+.semantify .collapsible-header {
+    padding: 1.2rem 1rem;
+}
+
+.semantify .websites-list .collapsible-header{
+    font-family: "Roboto Condensed";
+    font-size: 19.2px;
+}
+
+.modal .modal-footer{
+    padding: 0 24px;
+    margin-bottom: 10px;
+}
+
+.modal .modal-footer:after{
+    clear:both;
+}
+
+.semantify .modal .modal-footer .btn, .semantify .modal .modal-footer .btn-large, .semantify .modal .modal-footer .btn-flat {
+    float: right;
+    margin: 3px 0;
+}
+
+.semantify .modal .modal-footer .btn-flat.linkstyle{
+    text-transform: none;
+    padding: 0;
+}
+
+.semantify .modal .modal-footer .btn-flat.linkstyle:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.form-error{
+    margin-top: 10px;
+    min-height: 1em;
+    font-size: 1em;
+    line-height: 1em;
+    color:  #BF2633;
+}
+
+.modal-overlay-small {
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 130%;
+    width: 100%;
+    background: #000;
+    display: none;
+    will-change: opacity;
+    overflow: hidden;
+}
+
+.modal-overlay-small.hide{
+    display: none;
+}
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 100px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+
+span.badge.new.color_0_WaitingForCrawl{
+    background-color: rgba(47,52,53,0.4) !important;
+}
+
+span.badge.new.color_1_Created{
+    background-color: rgba(47,52,53,0.52) !important;
+}
+
+span.badge.new.color_2_DiscoveringLinks{
+    background-color: rgba(47,52,53,0.64) !important;
+}
+
+span.badge.new.color_3_ReadyForCrawl{
+    background-color: rgba(47,52,53,0.76) !important;
+}
+
+span.badge.new.color_3_ReadyForRetrieval{
+    background-color: rgba(47,52,53,0.76) !important;
+}
+
+span.badge.new.color_4_Crawling{
+    background-color: rgba(47,52,53,0.88) !important;
+}
+
+span.badge.new.color_4_Retrieving{
+    background-color: rgba(47,52,53,0.88) !important;
+}
+
+span.badge.new.color_5_Finished{
+    background-color: rgba(47,52,53,1) !important;
+}
+
+span.badge.new.color_6_Stopping{
+    background-color: rgba(95, 8, 8, 0.55) !important;
+}
+
+span.badge.new.color_7_Stopped{
+    background-color: rgb(95, 8, 8) !important;
+}
+
+.semantify .new.badge::after{
+    text-transform: uppercase;
+}
+
+.semantify li .info-message h2{
+    margin-top: 0;
+}
+
+.collapsible-header.force-materialize:hover, .collapsible-header.force-materialize.active {
+    background-color: rgba(47, 52, 53, 0.04) !important;
 }
 
 
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 
 
+.info-message{
+    width: 100%;
+    text-align: center;
+}
+
+.semantify .info-message h2, .semantify .info-message .claim-text{
+    color: #959fa0;
+    text-align: center;
+}
 
 
+.semantify table.left-table thead {
+    border: 0;
+    border-right: 1px solid #d0d0d0;
+    display: block;
+    float: left;
+}
+
+.semantify table.left-table thead tr {
+    display: block;
+    padding: 0 10px 0 0;
+}
+
+.semantify table.left-table th {
+    display: block;
+    text-align: right;
+}
+
+.semantify table.left-table th, table.left-table td {
+    margin: 0;
+    vertical-align: top;
+}
+
+.semantify table.left-table thead tr th::before {
+    content: "\00a0";
+}
+
+.semantify table.left-table tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.semantify table.left-table tbody tr {
+    /*display: inline-block;*/
+    vertical-align: top;
+}
+
+.semantify table.left-table tr {
+    padding: 0 10px;
+    border-bottom: none;
+}
+
+.semantify table.left-table td {
+    /*display: block;*/
+    min-height: 1.25em;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: normal;
+}
+
+table.left-table td.key{
+    font-weight: bold;
+    border-right: 1px rgb(208, 208, 208) solid;
+    margin-right: 10px;
+    text-align: right;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+.semantify .first-header{
+    margin-top: 0;
+    text-align: center !important;
+}
+
+.semantify span.item{
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: rgba(47, 52, 53);
+    border-radius: 2px;
+    text-transform: uppercase;
+    min-width: 3rem;
+    padding: 3px 6px;
+    margin: 2px 5px 2px 0;
+    text-align: center;
+    line-height: inherit;
+    box-sizing: border-box;
+    background-color: rgba(47, 52, 53, 0.2) !important;
+    white-space: nowrap;
+}
+
+.semantify .autocomplete-content.dropdown-content li > a,.semantify .autocomplete-content.dropdown-content li > span{
+    color: rgba(47, 52, 53, 0.5);
+}
 
 
+.semantify .autocomplete-content li .highlight {
+    color: rgb(47, 52, 53);
+}
+
+.semantify .chips.focus {
+    border-bottom: 1px solid rgba(47, 52, 53, 0.5);
+    -webkit-box-shadow: 0 1px rgba(47, 52, 53, 0.5);
+    box-shadow: 0 1px 0 0 rgba(47, 52, 53, 0.5);
+}
 
 
+.semantify .chip:focus {
+    outline: none;
+    background-color: rgb(47, 52, 53);
+}
 
 
+.semantify .collapsible span.badge.new {
+    line-height: 1.75rem;
+    font-size:0.9rem;
+}
+
+.badge-place {
+    width:100%;
+}
+
+.semantify .collapsible  span.badge{
+    height: 1.7rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.semantify .autocomplete-content.dropdown-content, .semantify .chips .input{
+    width:200px !important;
+}
+
+.collapsible-body.force-materialize h2.table{
+    font-size:18px;
+    margin-bottom: 8px;
+}
+
+.collapsible-body.force-materialize .website-filters h2.table{
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+.semantify .tabs{
+    background-color: transparent;
+}
+
+.semantify .tabs .tab a {
+    color: #BF2633;
+    padding: 0 24px 0 0;
+}
+
+.semantify .tabs .indicator{
+    display: none;
+}
+
+.semantify .tabs .tab a.active{
+    text-decoration: underline;
+}
 
 
+.semantify .tabs .tab a:hover{
+    text-decoration: underline;
+}
 
+.semantify .tabs .tab a.active .button-transparent.grey{
+    background-color: rgba(149, 159, 160, 1) !important;
+    color: white !important;
+}
 
+.semantify .before-stat .info-message{
+    margin-bottom: 50px;
+}
 
+.semantify .before-stat .info-message h2{
+    display: none;
+}
 
+.semantify #snackbar-container{
+    bottom 40px;
+}
+
+.semantify.not-front .entry-title.center{
+    text-align: center;
+}
+
+#finishedMessage + a {
+   /* display: none; */
+}
+
+.semantify #snackbar-container{
+    bottom:20px;
+}
+
+#brokertest {
+    text-align: center;
+}
+
+#brokertest .container{
+    width:100%;
+}
+
+#brokertest .form-group{
+    text-align:left;
+}
+
+#brokertest input {
+    background-color: transparent;
+}
 
 
 
 @media only screen and (min-width : 1201px) {
 
-    .semantify nav .menu ul li a, .semantify button{
+    .semantify nav .menu ul li a, .semantify nav .menu ul li span, .semantify button, .semantify .btn{
         font-size: 16px;
     }
 
     .services .icon-block{
-        height: 293px;
+        height: 253px;
     }
 
     .preview-box{
@@ -1516,12 +1939,6 @@ footer .author a{
 
 }
 
-@media only screen and (max-width : 1105px) {
-
-    .services .icon-block{
-        height: 335px;
-    }
-}
 
 @media only screen and (max-width : 992px) {
 
@@ -1652,7 +2069,7 @@ footer .author a{
     }
 
     .services .icon-block{
-        height: 260px;
+        height: 253px;
     }
 
     .details .details-text{
@@ -1680,7 +2097,7 @@ footer .author a{
         margin-top:20px;
     }
 
-    .semantify nav .menu ul li a{
+    .semantify nav .menu ul li a, .semantify nav .menu ul li span{
         font-size:1.5vw;
     }
 
@@ -1689,14 +2106,13 @@ footer .author a{
         max-height:42px;
         line-height: 100%;
         height:4vw;
-
     }
 
     .semantify button.button-red{
         font-size:1.7vw;
     }
 
-    .semantify .dropdown-content{
+    .semantify .dropdown-content:not(.autocomplete-content){
         background: rgba(255,255,255,0.35);
         border-radius: 5px;
     }
@@ -1712,8 +2128,9 @@ footer .author a{
 }
 
 @media only screen and (max-width : 800px) {
-   .semantify .button-collapse, #mobile-logo{
-        display:inline-block !important;
+
+    .semantify .button-collapse, #mobile-logo{
+        /*display:inline-block !important;*/
     }
 
     .semantify  .med-up-menu{
@@ -1747,7 +2164,7 @@ footer .author a{
 
 
     .semantify.not-front .top-container {
-            min-height: 121px;
+        min-height: 121px;
     }
 
     .logo img{
@@ -1964,7 +2381,7 @@ footer .author a{
     }
 
     .semantify.not-front .top-container {
-            min-height: 108px;
+        min-height: 108px;
     }
 
 }
