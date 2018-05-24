@@ -1908,6 +1908,21 @@ button:hover{
     color: #2F3435;
 }
 
+.semantify .small-space-top{
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width : 1201px) {
 
     .semantify nav .menu ul li a, .semantify nav .menu ul li span, .semantify button, .semantify .btn{
