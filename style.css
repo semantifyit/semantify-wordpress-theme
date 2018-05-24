@@ -1689,10 +1689,6 @@ span.badge.new.color_7_Stopped{
     }
 }
 
-.semantify h4.not-white-on-semantify{
-    color: #2F3435;
-}
-
 .info-message{
     width: 100%;
     text-align: center;
@@ -1908,7 +1904,9 @@ button:hover{
     background-color: transparent;
 }
 
-
+.semantify h4.not-white-on-semantify{
+    color: #2F3435;
+}
 
 @media only screen and (min-width : 1201px) {
 
