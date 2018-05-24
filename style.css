@@ -1463,6 +1463,9 @@ footer .author a{
     border-radius: 3px;
 }
 
+.semantify h4.not-white-on-semantify{
+    color: #2F3435;
+}
 
 
 
