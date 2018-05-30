@@ -12,10 +12,6 @@ function numberWithSpaces(x) {
 (function($){
   $(function(){
 
-
-
-
-
     $('.button-collapse').sideNav({
         menuWidth: 200, // Default is 300
         edge: 'left', // Choose the horizontal origin
@@ -37,6 +33,14 @@ function numberWithSpaces(x) {
           }
 
       });
+
+      var settings = {
+          wp:false,
+          colClass: "col-lg-4 col-md-6 col-sm-6 col-xs-12"
+      };
+
+      IA_Init(settings);
+
 
       $("#instant-button-1").click(function(){
           $(".semantify-instant-annotations").toggleClass("hidden");

@@ -87,7 +87,9 @@
 <script src="<?php echo get_bloginfo('template_directory'); ?>/components/highlight/highlight.pack.js"></script>
 
 <?php if(is_front_page()){ ?>
-  <script  src="<?php echo get_bloginfo('template_directory'); ?>/components/instant-annotator-master/javascript/instantAnnotations.js?<?php echo rand(0,1111);?>"></script>
+   <!--<script  src="<?php echo get_bloginfo('template_directory'); ?>/components/instant-annotator-master/javascript/instantAnnotations.js?<?php echo rand(0,1111);?>"></script>-->
+
+    <script src="https://cdn.rawgit.com/semantifyit/instant-annotator/f9855d14/javascript/instantAnnotations.js"></script>
     <script src="https://semantify.it/libs/snackbar/snackbar.min.js"></script>
     <script src="https://semantify.it/assets/js/utilities.js"></script>
     <script src="https://semantify.it/brokertest/brokertest.js"></script>
