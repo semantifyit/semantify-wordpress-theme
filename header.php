@@ -22,7 +22,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php echo get_bloginfo( 'description' ); ?>">
-<link href="<?php echo get_bloginfo('template_directory'); ?>/components/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/components/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
 <!-- Base MasterSlider style sheet -->
 <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/components/mastersider1.5.0/quick-start/masterslider/style/masterslider.css" />
 <!-- MasterSlider default skin -->
@@ -32,12 +34,9 @@
 <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css?v=1.1.9<?php echo rand(0,99)?>" type="text/css" rel="stylesheet" media="screen,projection">
 
 
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
-<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
-
-
     <link href="<?php echo get_bloginfo('template_directory'); ?>/components/instant-annotator-master/css/instantAnnotations.css?<?php echo rand(0,1111);?>" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/fontawesome-all.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/materialicons.css" type="text/css" rel="stylesheet" media="screen,projection">
 
 
 
