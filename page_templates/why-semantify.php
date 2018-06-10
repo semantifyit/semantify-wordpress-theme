@@ -108,10 +108,10 @@ if(!is_front_page()) {
                 <div class="col s12 l4 m4 righ">
                     <div class="preview-box">
                         <h2 class="">
-                            <?php echo get_post_meta($post->ID, 'preview-box-2-title',1); ?>
+                            <?php echo get_post_meta($post->ID, 'preview-box-3-title',1); ?>
                         </h2>
                         <p>
-                            <?php echo get_post_meta($post->ID, 'preview-box-2-text',1); ?>
+                            <?php echo get_post_meta($post->ID, 'preview-box-3-text',1); ?>
                         </p>
                         <div class="example">
                             <div class="bussines">
