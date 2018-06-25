@@ -38,6 +38,7 @@ if(!is_front_page()) {
                             </p>
                             <br/>
                             <div id="brokertest"></div>
+                            <?php echo get_post_meta($post->ID, 'bellow-tester',1); ?>
                         </div>
                     </div>
                 </div>

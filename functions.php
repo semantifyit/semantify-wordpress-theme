@@ -272,6 +272,19 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
             }
             break;
 
+        case"broker-test":
+            if(!$delete){
+                semantify_add_meta($id, "bellow-tester","<div class=\"center-align\"><div class=\"claim-text\">
+                <h2 class=\"entry-title center\">Grow with Broker Beta</h2>
+                <p>Cras id tortor nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Praesent eget faucibus magna. Integer vel ligula consequat.</p>
+            </div>
+<a href=\"http://broker.semantify.it\"><button class=\"button-red big\">Register now</button></a></div>");
+
+            } else {
+                delete_post_meta($id,"bellow-tester");
+            }
+            break;
+
         case"services":
 
             if(!$delete){
