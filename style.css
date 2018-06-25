@@ -1912,6 +1912,10 @@ button:hover{
     margin-top: 15px;
 }
 
+.semantify.not-front nav ul.dropdown-content{
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 3px;
+}
 
 
 
