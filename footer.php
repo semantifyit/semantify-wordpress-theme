@@ -43,12 +43,12 @@
                         <?php echo get_option('footer-section-2-text'); ?>
                     </p>
                     <div class="icons-get">
-                        <?php  $val = get_option('footer-section-2-linkedin'); if(trim($val)!="") {?><a href="https://www.linkedin.com/<?php echo $val;?>"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a><?php  } ?>
-                        <?php  $val = get_option('footer-section-2-faceook'); if(trim($val)!="") {?><a href="https://facebook.com/<?php echo $val;?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a><?php  } ?>
-                        <?php  $val = get_option('footer-section-2-twitter');  if(trim($val)!="") {?><a href="https://twitter.com/<?php echo $val;?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a><?php  } ?>
-                        <?php  $val = get_option('footer-section-2-youtube');  if(trim($val)!="") {?><a href="https://youtube.com/<?php echo $val;?>"><i class="fa fa-youtube-square" aria-hidden="true"></i></a><?php  } ?>
-                        <?php  $val = get_option('footer-section-2-googleplus');  if(trim($val)!="") {?><a href="https://plus.google.com/<?php echo $val;?>"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a><?php  } ?>
-                        <?php  $val = get_option('footer-section-2-email');  if(trim($val)!="") {?><a href="mailto:<?php echo $val;?>"><i class="fa fa-envelope-square" aria-hidden="true"></i></a><?php  } ?>
+                        <?php  $val = get_option('footer-section-2-linkedin'); if(trim($val)!="") {?><a href="https://www.linkedin.com/<?php echo $val;?>"><i class="fab fa-linkedin-square" aria-hidden="true"></i></a><?php  } ?>
+                        <?php  $val = get_option('footer-section-2-facebook'); if(trim($val)!="") {?><a href="https://facebook.com/<?php echo $val;?>"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><?php  } ?>
+                        <?php  $val = get_option('footer-section-2-twitter');  if(trim($val)!="") {?><a href="https://twitter.com/<?php echo $val;?>"><i class="fab fa-twitter-square" aria-hidden="true"></i></a><?php  } ?>
+                        <?php  $val = get_option('footer-section-2-youtube');  if(trim($val)!="") {?><a href="https://youtube.com/<?php echo $val;?>"><i class="fab fa-youtube-square" aria-hidden="true"></i></a><?php  } ?>
+                        <?php  $val = get_option('footer-section-2-googleplus');  if(trim($val)!="") {?><a href="https://plus.google.com/<?php echo $val;?>"><i class="fab fa-google-plus-square" aria-hidden="true"></i></a><?php  } ?>
+                        <?php  $val = get_option('footer-section-2-email');  if(trim($val)!="") {?><a href="mailto:<?php echo $val;?>"><i class="fab fa-envelope-square" aria-hidden="true"></i></a><?php  } ?>
                     </div>
                 </div>
             </div>
