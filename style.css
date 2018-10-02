@@ -547,6 +547,7 @@ h6.future{
     letter-spacing: 0;
     line-height: 20px;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .semantify button, .semantify .btn{
@@ -1934,7 +1935,7 @@ button:hover{
     }
 
     .services .icon-block{
-        height: 253px;
+        height: 260px;
     }
 
     .preview-box{
