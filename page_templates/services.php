@@ -62,7 +62,7 @@ if(!is_front_page()) {
 
                                 <p class="light center"><?php echo get_post_meta($post->ID, 'service-'.$i.'-text', 1); ?></p>
                                 <div class=""><a
-                                            href="#<?php echo get_post_meta($post->ID, 'service-'.$i.'-button-link', 1); ?>">
+                                            href="<?php echo get_post_meta($post->ID, 'service-'.$i.'-button-link', 1); ?>">
                                         <button class="button-transparent small"><?php echo get_post_meta($post->ID,
                                                                                                           'service-'.$i.'-button-title',
                                                                                                           1); ?></button>
