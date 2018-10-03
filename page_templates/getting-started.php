@@ -43,18 +43,21 @@ if(!is_front_page()) {
             <div class="row">
                 <div class="col s12 buttons-box" style="text-align: center">
                     <button class="button-transparent red big" id="instant-button-1"><?php echo get_post_meta($post->ID, 'button-1-title',1); ?></button>
-                    <button class="button-transparent red big " style="display:none;" id="instant-button-2"><?php echo get_post_meta($post->ID, 'button-2-title',1); ?></button>
+                    <button class="button-transparent red big " id="instant-button-2"><?php echo get_post_meta($post->ID, 'button-2-title',1); ?></button>
                 </div>
             </div>
 
-            <div class="semantify-instant-annotations hidden">
+            <div class="semantify-instant-annotations hidden" id="IAblock">
                 <div class="row">
-
                     <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-1',1); ?>" data-title="<?php echo get_post_meta($post->ID, 'instant-title-1',1); ?>" data-btns="default"></div>
                     <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-2',1); ?>" data-title="<?php echo get_post_meta($post->ID, 'instant-title-2',1); ?>" data-sub="true" data-btns="preview+clear+save+copy"></div>
                     <div class="IA_Box" data-dshash="<?php echo get_post_meta($post->ID, 'instant-hash-3',1); ?>" data-title="<?php echo get_post_meta($post->ID, 'instant-title-3',1); ?>" data-sub="true" data-btns="preview+clear+save+copy"></div>
+                </div>
+            </div>
 
-
+            <div class="semantify-instant-annotations hidden" id="IVblock">
+                <div class="row">
+                    <div class="IV_Box"></div>
                 </div>
             </div>
 

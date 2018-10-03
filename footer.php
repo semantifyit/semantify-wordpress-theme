@@ -90,6 +90,7 @@
    <!--<script  src="<?php echo get_bloginfo('template_directory'); ?>/components/instant-annotator-master/javascript/instantAnnotations.js?<?php echo rand(0,1111);?>"></script>-->
 
     <script src="https://rawgit.com/semantifyit/instant-annotator/master/javascript/instantAnnotations.js"></script>
+    <script src="https://rawgit.com/semantifyit/instant-validator/master/javascript/validator.js"></script>
     <script src="https://semantify.it/libs/snackbar/snackbar.min.js"></script>
     <script src="https://semantify.it/assets/js/utilities.js"></script>
     <script src="https://semantify.it/brokertest/brokertest.js"></script>

@@ -42,8 +42,22 @@ function numberWithSpaces(x) {
       IA_Init(settings);
 
 
+      var settings = {
+          colClass: "col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6 col-xs-12",
+          wp: false
+      };
+
+      IV_Init(settings);
+
+
       $("#instant-button-1").click(function(){
-          $(".semantify-instant-annotations").toggleClass("hidden");
+          $("#IAblock").toggleClass("hidden");
+          $("#IVblock").addClass("hidden");
+      });
+
+      $("#instant-button-2").click(function(){
+          $("#IAblock").addClass("hidden");
+          $("#IVblock").toggleClass("hidden");
       });
 
       //load annotations

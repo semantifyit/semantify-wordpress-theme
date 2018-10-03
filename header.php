@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/components/highlight/styles/default.css" />
     <!-- user styles -->
     <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css?v=1.1.9<?php echo rand(0,99)?>" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/components/instant-annotator-master/css/instantAnnotations.css?<?php echo rand(0,1111);?>" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/components/instant-annotator-master/css/instantAnnotations.css" type="text/css" rel="stylesheet" media="screen,projection">
 
     <title><?php echo get_bloginfo( 'name' ); ?></title>
 
