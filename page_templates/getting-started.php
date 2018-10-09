@@ -57,7 +57,7 @@ if(!is_front_page()) {
 
             <div class="semantify-instant-annotations hidden" id="IVblock">
                 <div class="row">
-                    <div class="IV_Box"></div>
+                    <div class="IV_Box" data-title="<?php echo get_post_meta($post->ID, 'instant-validator-title-1',1); ?>"</div>
                 </div>
             </div>
 
