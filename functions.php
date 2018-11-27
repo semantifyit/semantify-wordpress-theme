@@ -48,6 +48,13 @@ function semantify_setup()
                 'post_title' => 'Getting Started',
                 'post_content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue vulputate convallis. Nullam nec elementum neque. Vivamus placerat viverra justo eget feugiat. Duis eu pellentesque justo.'
             ),
+            'latestnews' => array(
+                'post_type' => 'page',
+                'post_name' => 'latest-news',
+                'template' => 'page_templates/latest-news.php',
+                'post_title' => 'Latest news',
+                'post_content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue vulputate convallis. Nullam nec elementum neque. Vivamus placerat viverra justo eget feugiat. Duis eu pellentesque justo.'
+            ),
             'detailedinstructions' => array(
                 'post_type' => 'page',
                 'post_name' => 'detailed-instructions',
@@ -106,6 +113,10 @@ function semantify_setup()
                         'type' => 'post_type',
                         'object' => 'page',
                         'object_id' => '{{getting-started}}',
+                    ),array(
+                        'type' => 'post_type',
+                        'object' => 'page',
+                        'object_id' => '{{latest-news}}',
                     ),
                     array(
                         'type' => 'post_type',
@@ -272,6 +283,17 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
             }
             break;
 
+        case"latest-news":
+            if(!$delete){
+                semantify_add_meta($id, "latest-news-category","news");
+            } else {
+                delete_post_meta($id,"latest-news-category");
+            }
+            break;
+
+
+
+
         case"broker-test":
             if(!$delete){
                 semantify_add_meta($id, "bellow-tester","<br/><div class=\"center-align\"><div class=\"claim-text\">
@@ -408,7 +430,7 @@ function set_semantify_content(){
 
     echo("<br><br><div style='text-align: center;'><h3>Reset successfull</h3></div>");
 
-    $panels = array("why-semantify","services","getting-started","detailed-instructions","references");
+    $panels = array("why-semantify","services","getting-started","latest-news","detailed-instructions","references");
     update_option( "semantify-theme-panels", json_encode($panels) );
 
     semantify_custom_meta("why-semantify");
@@ -519,7 +541,12 @@ function save_book_meta( $post_id, $post, $update ) {
 add_action( 'save_post', 'save_book_meta', 10, 3 );
 
 
-
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+    global $post;
+    return '<br><a class="moretag" href="'. get_permalink($post->ID) . '"> Read more...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 
 
