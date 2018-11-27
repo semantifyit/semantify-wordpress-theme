@@ -53,7 +53,8 @@ if (!is_front_page()) {
                             $the_query = new WP_Query(array(
                                                           'category_name'  => get_post_meta($post->ID,
                                                                                             'latest-news-category', 1),
-                                                          'posts_per_page' => 3,
+                                                          'posts_per_page' => get_post_meta($post->ID,
+                                                                                            'latest-news-posts', 1),
                                                       ));
                             ?>
 

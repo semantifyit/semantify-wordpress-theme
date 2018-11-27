@@ -286,7 +286,10 @@ function semantify_custom_meta($slug, $id=-1,$delete=0){
         case"latest-news":
             if(!$delete){
                 semantify_add_meta($id, "latest-news-category","news");
+                semantify_add_meta($id, "latest-news-posts","3");
+
             } else {
+                delete_post_meta($id,"latest-news-category");
                 delete_post_meta($id,"latest-news-category");
             }
             break;
