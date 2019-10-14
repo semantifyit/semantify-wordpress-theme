@@ -39,18 +39,29 @@ function numberWithSpaces(x) {
           colClass: "col-lg-4 col-md-6 col-sm-6 col-xs-12"
       };
 
-      IA_Init(settings);
+      
 
 
       var settings = {
           colClass: "col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6 col-xs-12",
+		  colIAClass:'col-md-4 col-sm-6 col-xs-12',
           wp: false
       };
 
       IV_Init(settings);
-
+	  
+	  var idBox1=$('#IA_Box1').data('dshash');
+	  var idBox2=$('#IA_Box2').data('dshash');
+	  var idBox3=$('#IA_Box3').data('dshash');
+	  
+ InstantAnnotation.createIABox('IA_Box1',idBox1 , {panelColClass: settings.colIAClass} );
+	  	  
+ InstantAnnotation.createIABox('IA_Box2',idBox2 ,{panelColClass: settings.colIAClass});
+	  	  
+ InstantAnnotation.createIABox('IA_Box3',idBox3 ,{panelColClass: settings.colIAClass} );
 
       $("#instant-button-1").click(function(){
+		  
           $("#IAblock").toggleClass("hidden");
           $("#IVblock").addClass("hidden");
       });
@@ -63,6 +74,7 @@ function numberWithSpaces(x) {
       //load annotations
       var jqxhr = $.ajax( "https://semantify.it/api/annotation/count/total/" )
           .done(function( data ) {
+			  console.log('data is ',data);
               $("#annotations_count").html(numberWithSpaces(data));
           })
           .fail(function() {
